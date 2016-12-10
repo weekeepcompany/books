@@ -1,6 +1,8 @@
 \documentclass{amsbook}
 \usepackage{amsfonts}
 \usepackage{marginnote}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \newcommand{\aside}[1]{\marginnote{\scriptsize{#1}}[0cm]}
 \newcommand{\aaside}[2]{\marginnote{\scriptsize{#1}}[#2]}
@@ -170,7 +172,7 @@ that $y_1$ and $y_3$ each have exactly one neighbor in $X$ and $\Delta(G) - 1$ n
 Now $\card{A\cap B} = \card{A} + \card{B} - \card{A\cup B} \ge 2(\Delta(G) - 1) - d(y_1) \ge \Delta(G) - 2 > 0$.  But there can't be a vertex
 in $A \cap B$ since it would be adjacent to $y_1,y_2,y_3$ as well as $\Delta(G) - 2$ vertices in $A$ and thus have degree greater than $\Delta(G)$, a contradiction. 
 
-\chapter*{edge coloring}
+\chapter*{coloring edges}
 It is also useful to consider coloring the edges of a graph so that incident edges receive different colors.  This
 appears to be at odds with our previous claim that this book was only about coloring vertices of graph; fortunately, edge coloring
 is just a special case of vertex coloring.  If $G$ is a graph, the \emph{line graph} of $G$, written
@@ -190,12 +192,12 @@ If $G$ is a bipartite graph, then $G$ is $\Delta(G)$-edge-colorable.
 \end{theorem}
 \begin{proof}
 Suppose there is a graph $G$ that is not $\Delta(G)$-edge-colorable.  Then we may pick such a graph $G$ with $\size{G}$ as small as possible.
-Now $\size{G} > 0$, since we can surely color a graph with zero edges using zero colors.  Let $xy$ be an edge in $G$.  Since $\size{G-xy} < \size{G}$,
+Now $\size{G} > 0$, since we can surely edge color a graph with zero edges using zero colors.  Let $xy$ be an edge in $G$.  Since $\size{G-xy} < \size{G}$,
 applying the theorem to $G-xy$ gives an edge coloring of $G-xy$ using at most $\Delta(G)$ colors.  Now each of $x$ and $y$ are incident to at most $\Delta(G) - 1$ edges
-in $G-xy$ and $G$ has no $\Delta(G)$-edge-coloring, so there is a color red available at $x$ and a different color blue available at $y$.  There is a unique maximal length
-path $P$ starting at $x$ with edges alternately colored blue and red. Let $z$ be the last vertex of $P$.  Since $P$ alternates between two colors, $P$ has even length.
-In particular, $z \ne y$ since $G$ does not contain an odd cycle by Theorem \ref{TwoColoring}.  But then we get a $\Delta(G)$-edge-coloring of $G$ by swapping the colors red and blue 
-along $P$ and coloring $xy$ blue, a contradiction.
+in $G-xy$ and $G$ has no $\Delta(G)$-edge-coloring, so there is a color red available at $x$ and a different color blue available at $y$.  There is a unique maximal 
+path $P$ starting at $x$ with edges alternately colored blue and red. If $P$ does not end at $y$, then we get a $\Delta(G)$-edge-coloring of $G$ by swapping the colors red and blue 
+along $P$ and coloring $xy$ blue, a contradiction.  Since $P$ ends at $y$ and alternates between red and blue, it has even length.  But then $P + xy$ is an odd cycle in $G$, violating
+Theorem \ref{TwoColoring}.
 \end{proof}
 
 It may come as a surpise that even though we might need more than $\Delta(G)$ colors to edge color a graph $G$, we will only ever need at most one extra color.
@@ -203,16 +205,45 @@ For bipartite graphs we were able to repair an almost correct coloring by swappi
 general case we don't have the same control over a path between two vertices, but we can exert some measure of control over paths leaving and entering a larger structure. 
 The larger structure we use here is the whole neighborhood of a vertex.
 
+This is a good time to introduce a lemma that will be useful throughout the book.  
+A \emph{transversal} in a collection of sets $\set{A_i}_{i \in \irange{k}}$ is a set $X \subseteq \bigcup_{i \in \irange{k}} A_i$ with $\card{X} = k$ such that $\card{X \cap A_i} = 1$
+for all $i \in \irange{k}$.
+\begin{lemma}
+$\set{A_i}_{i \in \irange{k}}$ has a transversal just in case $\card{\bigcup_{i \in I} A_i} \ge \card{I}$ for all $I \subseteq \irange{k}$.
+\end{lemma}
+\begin{proof}
+\end{proof}
+
+\begin{corollary}\label{TransversalCorollary}
+If $\card{\bigcup_{i \in \irange{k}} A_i} \ge k$, then there is nonempty $I \subseteq \irange{k}$ such that $\set{A_i}_{i \in I}$ has a transversal $X$ where $X \cap A_i = \emptyset$
+for all $i \in \irange{k} \setminus I$.
+\end{corollary}
+\begin{proof}
+\end{proof}
+
 \begin{theorem}
 If $G$ is a graph, then $G$ is $\parens{\Delta(G) + 1}$-edge-colorable.
 \end{theorem}
 \begin{proof}
-Suppose there is a graph $G$ that is not $(\Delta(G) + 1)$-edge-colorable.  Then we may pick such a graph $G$ with $\size{G}$ as small as possible.
-Now $\size{G} > 0$, since we can surely color a graph with zero edges using at most one color. Let $xy$ be an edge in $G$.  Since $\size{G-xy} < \size{G}$,
-applying the theorem to $G-xy$ gives an edge coloring $\pi$ of $G-xy$ using at most $\Delta(G) + 1$ colors.  Let's name the neighbors of $x$, say $y_0, y_1, \ldots, y_k$ where
-$y_0 = y$ and $k < \Delta(G)$.  By symmetry, we may assume that $1, \ldots, a$ are available at $x$ and $a+1, \ldots, b$ are available at $y_0$ where $a \ge 2$ and $b-a \ge 2$.
-Also by symmetry, we may assume that $\pi(xy_i) = a + i$ for $i \in \irange{k}$. Now each of $y_i$ for $i \in \irange{k}$ has at least one available color $c_i$.  If $c_i \in \set{1,\ldots, a}$ for some $i \in \irange{b-a}$, then we get a $(\Delta(G)+1)$-coloring of 
-$G$ by coloring $xy_i$ with $c_i$ and $xy_0$ with $\pi(xy_i)$, a contradiction.  
+Suppose there is a graph $G$ that is not $(\Delta(G) + 1)$-edge-colorable.  Then we may pick such a graph $G$ with $\card{G}$ as small as possible.
+Now $\card{G} > 0$, since we can surely edge color a graph with zero vertices using at most one color. Let $x$ be a vertex in $G$.   Call $S\subseteq N(x)$ \emph{acceptable} for 
+an edge coloring $\pi$ of $G-x$ if $\set{\bar{\pi}(v)}_{v \in S}$ has a transversal $T_S$ such that $\card{\bar{\pi}(v) \setminus T_S} \ge 2$ for all $v \in N(x)\setminus S$.
+
+Since $\card{G-x} < \card{G}$, applying the theorem to $G-x$ gives an edge coloring $\zeta$ of $G-x$ using at most $\Delta(G) + 1$ colors. 
+Note that the empty set is acceptable for $\zeta$.  So, we may choose an edge coloring $\pi$ of $G-x$ using at most $\Delta(G) + 1$ colors and $S\subseteq N(x)$ 
+that is acceptable for $\pi$ so as to maximize $\card{S}$ and subject to that to maximize $\card{C_S}$, where
+\[C_S \DefinedAs \bigcup_{v \in N(x) \setminus S} \bar{\pi}(v) \setminus T_S.\]
+Now $S \neq N(x)$ for otherwise we can extend $\pi$ to all of $G$ using $T_S$.  Suppose $\card{C_S}\ge \card{N(x) \setminus S}$.
+Then, by Corollary \ref{TransversalCorollary}, there is nonempty $A \subseteq N(x) \setminus S$ such that $\set{\bar{\pi}(v)\setminus T_S}_{v \in A}$ has
+a transversal $X$ where $X \cap \bar{\pi}(v) = \emptyset$ for all $v \in N(x) \setminus \parens{S \cup A}$.  But then $S\cup A$ is acceptable for $\pi$, contradicting
+maximality of $\card{S}$.  
+
+So, $\card{C_S}< \card{N(x) \setminus S}$ and hence $\card{C_S \cup T_S} < \card{N(x)} \le \Delta(G)$.  
+Pick $\tau \in \irange{\Delta(G)} \setminus \parens{C_S \cup T_S}$.  Since $S$ is acceptable for $\pi$, $\card{\bar{\pi}(v) \setminus T_S} \ge 2$ for all $v \in N(x)\setminus S$.
+Hence there are $v_1, v_2, v_3 \in N(x)\setminus S$ and $\gamma \in C_S$ such that $\gamma \in \bar{\pi}(v_i) \setminus T_S$ for all $i \in \irange{3}$.
+There is a unique maximal path $P$ starting at $v_1$ with edges alternately colored $\tau$ and $\gamma$.  
+Let $\zeta$ be the edge coloring made from $\pi$ by swapping $\tau$ and $\gamma$ on $P$.  Then $\zeta$ violates the maximality of $\card{C_S}$ since $S$ is acceptable for $\zeta$ and
+\[\bigcup_{v \in N(x) \setminus S} \bar{\zeta}(v) \setminus T_S = \set{\tau} \cup C_S.\]
 
 \end{proof}
 
