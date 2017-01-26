@@ -2,18 +2,18 @@
 \contentsline {chapter}{\tocchapter {Chapter}{}{graphs}}{1}
 \contentsline {chapter}{\tocchapter {Chapter}{}{coloring vertices}}{3}
 \contentsline {section}{\tocsection {}{}{basic estimates}}{3}
+\contentsline {section}{\tocsection {}{}{list coloring}}{5}
+\contentsline {section}{\tocsection {}{}{online list coloring}}{5}
+\contentsline {section}{\tocsection {}{}{kernel tools}}{5}
+\contentsline {subsection}{\tocsubsection {}{}{degree again}}{5}
+\contentsline {subsection}{\tocsubsection {}{}{maximum independent covers}}{6}
+\contentsline {section}{\tocsection {}{}{polynomial tools}}{6}
+\contentsline {subsection}{\tocsubsection {}{}{combinatorial nullstellensatz}}{6}
+\contentsline {subsection}{\tocsubsection {}{}{coefficient formulae}}{6}
+\contentsline {subsection}{\tocsubsection {}{}{a combinatorial interpretation}}{6}
 \contentsline {chapter}{\tocchapter {Chapter}{}{coloring edges}}{7}
 \contentsline {section}{\tocsection {}{}{hardness}}{8}
 \contentsline {chapter}{\tocchapter {Chapter}{}{vertex coloring, again}}{11}
-\contentsline {section}{\tocsection {}{}{list coloring}}{11}
-\contentsline {section}{\tocsection {}{}{online list coloring}}{11}
-\contentsline {section}{\tocsection {}{}{kernel tools}}{11}
-\contentsline {subsection}{\tocsubsection {}{}{degree again}}{11}
-\contentsline {subsection}{\tocsubsection {}{}{maximum independent covers}}{11}
-\contentsline {section}{\tocsection {}{}{polynomial tools}}{11}
-\contentsline {subsection}{\tocsubsection {}{}{combinatorial nullstellensatz}}{11}
-\contentsline {subsection}{\tocsubsection {}{}{coefficient formulae}}{11}
-\contentsline {subsection}{\tocsubsection {}{}{a combinatorial interpretation}}{11}
 \contentsline {chapter}{\tocchapter {Chapter}{}{edge coloring, again}}{13}
 \contentsline {section}{\tocsection {}{}{fans as a greedy strategy}}{13}
 \contentsline {section}{\tocsection {}{}{acceptable paths}}{13}

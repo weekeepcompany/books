@@ -26,6 +26,7 @@
 \newtheorem{problem}{Problem}
 \newtheorem{proposition}{Proposition}
 \newtheorem{remark}{Remark}
+\newtheorem{observation}{Observation}
 \newtheorem{solution}{Solution}
 \newtheorem{summary}{Summary}
 \newtheorem{theorem}{Theorem}
@@ -47,6 +48,8 @@
 \newcommand{\parens}[1]{\left( #1 \right)}
 \newcommand{\brackets}[1]{\left[ #1 \right]}
 \newcommand{\DefinedAs}{\mathrel{\mathop:}=}
+
+\newcommand{\pot}{\operatorname{pot}}
 
 \begin{document}
 \frontmatter
@@ -172,6 +175,36 @@ that $y_1$ and $y_3$ each have exactly one neighbor in $X$ and $\Delta(G) - 1$ n
 Now $\card{A\cap B} = \card{A} + \card{B} - \card{A\cup B} \ge 2(\Delta(G) - 1) - d(y_1) \ge \Delta(G) - 2 > 0$.  But there can't be a vertex
 in $A \cap B$ since it would be adjacent to $y_1,y_2,y_3$ as well as $\Delta(G) - 2$ vertices in $A$ and thus have degree greater than $\Delta(G)$, a contradiction. 
 
+
+\section*{list coloring}
+When attempting to $k$-color a graph $G$, it will often be convenient to first $k$-color $G[S]$ for some $S \subset V(G)$ and then try to 
+$k$-color $G-S$ in a compatible manner. To make this precise, think of each vertex in $G$ starting with a list of $k$ permissible colors, say $\irange{k}$.
+When we $k$-color $G[S]$, the colors used on $N(v) \cap S$ are no longer permissible for each $v \in V(G-S)$.  For $v \in V(G-S)$, let $L(v)$ be the permissible colors
+for $v$ after $k$-coloring $G[S]$.  Now our problem is to pick $c_v \in L(v)$ for each $v \in V(G-S)$ such that $c_x \ne c_y$ whenever $xy \in E(G-S)$.  This is the
+\emph{list coloring} problem.
+
+The list coloring problem arose as a subproblem in our attempt to $k$-color a graph.  By taking it out of this context and viewing list coloring as a first-class problem in its own
+right, we will be able to prove more general theorems while also simplifying proofs.  A \emph{list assignment} on a graph $G$ gives a set of colors $L(v)$ to each $v \in V(G)$.  
+If there is $c_v \in L(v)$ for each $v \in V(G)$ such that $c_x \ne c_y$ whenever $xy \in E(G)$, then $G$ is \emph{$L$-colorable}.
+
+It will often be convenient to work with an equivalent dual version of list assignments.  
+Instead of assigning a list of colors to each vertex, we assign a set of vertices to each color.  Given a set of colors $P$, a \emph{$P$-assignment} on a graph $G$ is a function
+from $P$ to the subsets of $V(G)$.  For a list assigment $L$, let the \emph{pot of $L$} be the set of all colors appearing in at least one $L(v)$; that is, $\pot(L) \DefinedAs \bigcup_{v \in V(G)} L(v)$.
+Then $L$ gives rise to the $\pot(L)$-assignment $C_L$ given by $C_L(c) \DefinedAs \setb{v}{V(G)}{c \in L(v)}$.
+
+\begin{observation}
+$G$ is $L$-colorable just in case there are independent sets $I_c \subseteq C_L(c)$ for each $c \in \pot(L)$ that together cover $V(G)$.
+\end{observation}
+
+\section*{online list coloring}
+\section*{kernel tools}
+\subsection*{degree again}
+\subsection*{maximum independent covers}
+\section*{polynomial tools}
+\subsection*{combinatorial nullstellensatz}
+\subsection*{coefficient formulae}
+\subsection*{a combinatorial interpretation}
+
 \chapter*{coloring edges}
 It is also useful to consider coloring the edges of a graph so that incident edges receive different colors.  This
 appears to be at odds with our previous claim that this book was only about coloring vertices of graph; fortunately, edge coloring
@@ -260,25 +293,6 @@ We need a concise proof of this without having to introduce too much background.
 \end{proof}
 
 \chapter*{vertex coloring, again}
-When attempting to $k$-color a graph $G$, it will often be convenient to first $k$-color $G[S]$ for some $S \subset V(G)$ and then try to 
-$k$-color $G-S$ in a compatible manner. To make this precise, think of each vertex in $G$ starting with a list of $k$ permissible colors, say $\irange{k}$.
-When we $k$-color $G[S]$, the colors used on $N(v) \cap S$ are no longer permissible for each $v \in V(G-S)$.  For $v \in V(G-S)$, let $L(v)$ be the permissible colors
-for $v$ after $k$-coloring $G[S]$.  Now our problem is to pick $c_v \in L(v)$ for each $v \in V(G-S)$ such that $c_x \ne c_y$ whenever $xy \in E(G-S)$.  This is the
-\emph{list coloring} problem.
-
-\section*{list coloring}
-The list coloring problem arose as a subproblem in our attempt to $k$-color a graph.  By taking it out of this context and viewing list coloring as a first-class problem in its own
-right, we will be able to prove more general theorems while also simplifying proofs.  A \emph{list assignment} on a graph $G$ is
-
-\section*{online list coloring}
-\section*{kernel tools}
-\subsection*{degree again}
-\subsection*{maximum independent covers}
-\section*{polynomial tools}
-\subsection*{combinatorial nullstellensatz}
-\subsection*{coefficient formulae}
-\subsection*{a combinatorial interpretation}
-
 \chapter*{edge coloring, again}
 \section*{fans as a greedy strategy}
 \section*{acceptable paths}
