@@ -187,6 +187,35 @@ The list coloring problem arose as a subproblem in our attempt to $k$-color a gr
 right, we will be able to prove more general theorems while also simplifying proofs.  A \emph{list assignment} on a graph $G$ gives a set of colors $L(v)$ to each $v \in V(G)$.  
 If there is $c_v \in L(v)$ for each $v \in V(G)$ such that $c_x \ne c_y$ whenever $xy \in E(G)$, then $G$ is \emph{$L$-colorable}.
 
+\begin{theorem}\label{FirstListBound}
+If $L$ is a list assignment on a graph $G$ such that $\card{L(v)} > d(v)$ for all $v \in V(G)$, then $G$ is $L$-colorable.
+\end{theorem}
+\begin{proof}
+Color each vertex in turn using a color in its list not appearing on any of its colored neighbors.  
+This succeeds since each vertex has more permissible colors than neighbors.
+\end{proof}
+
+The requirement $\card{L(v)} > d(v)$ in Theorem \ref{FirstListBound} is quite strong, in the algorithm we really only need $L(v)$ to have more colors 
+than \emph{colored} neighbors rather than more colors than neighbors.  We can encode this extra information by \emph{orienting} the edges of $G$; that is, turning
+each edge into an arrow pointed one way or the other.  If $G$ is an oriented graph, the \emph{out-degree} of a vertex $v \in V(G)$, written $d^+(v)$, is the number of arrows
+pointing away from $v$.  An oriented graph is \emph{acyclic} if there is no sequence of arrows that ends where it starts.
+
+\begin{theorem}\label{SecondListBound}
+If $L$ is a list assignment on an acyclic oriented graph $G$ such that $\card{L(v)} > d^+(v)$ for all $v \in V(G)$, then $G$ is $L$-colorable.
+\end{theorem}
+\begin{proof}
+Suppose there is a list assignment $L$ on an acyclic oriented graph $G$ such that $\card{L(v)} > d^+(v)$ for all $v \in V(G)$, but $G$ is not $L$-colorable.  Then
+we may pick such an $L$ and $G$ with $\card{G}$ as small as possible.  Since $\card{G}$ is finite and $G$ is acyclic, there must be $w \in V(G)$ with $d^+(w) = 0$.
+Since $\card{L(w)} > d^+(w)$, we may choose $c \in L(w)$ and color $w$ with $c$.  Now let $L'$ be the list assignment on $G-w$ where $L'(v) = L(v) \setminus \set{c}$ if $v$
+is adjacent to $w$ and $L'(v) = L(v)$ otherwise.  Since $d^+(w) = 0$, for any vertex $v$ of $G-w$ that lost $c$ from its list, we have $d_{G-w}^+(v) = d^+(v) - 1$, so 
+$\card{L'(v)} > d_{G-w}^+(v)$ for all $v \in V(G-w)$.  Since $\card{G-w} < \card{G}$, applying the theorem shows that $G-w$ is $L'$-colorable, but then we have an $L$-coloring
+of $G$, a contradiction.
+\end{proof}
+
+Theorem \ref{SecondListBound} is no longer true if we drop ``acyclic'' from the hypotheses; take a cyclically directed triangle for example.  
+But there are ways to replace ``acyclic'' with weaker hypotheses and still get a true theorem.
+
+
 It will often be convenient to work with an equivalent dual version of list assignments.  
 Instead of assigning a list of colors to each vertex, we assign a set of vertices to each color.  Given a set of colors $P$, a \emph{$P$-assignment} on a graph $G$ is a function
 from $P$ to the subsets of $V(G)$.  For a list assigment $L$, let the \emph{pot of $L$} be the set of all colors appearing in at least one $L(v)$; that is, $\pot(L) \DefinedAs \bigcup_{v \in V(G)} L(v)$.

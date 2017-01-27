@@ -3,9 +3,9 @@
 \contentsline {chapter}{\tocchapter {Chapter}{}{coloring vertices}}{3}
 \contentsline {section}{\tocsection {}{}{basic estimates}}{3}
 \contentsline {section}{\tocsection {}{}{list coloring}}{5}
-\contentsline {section}{\tocsection {}{}{online list coloring}}{5}
-\contentsline {section}{\tocsection {}{}{kernel tools}}{5}
-\contentsline {subsection}{\tocsubsection {}{}{degree again}}{5}
+\contentsline {section}{\tocsection {}{}{online list coloring}}{6}
+\contentsline {section}{\tocsection {}{}{kernel tools}}{6}
+\contentsline {subsection}{\tocsubsection {}{}{degree again}}{6}
 \contentsline {subsection}{\tocsubsection {}{}{maximum independent covers}}{6}
 \contentsline {section}{\tocsection {}{}{polynomial tools}}{6}
 \contentsline {subsection}{\tocsubsection {}{}{combinatorial nullstellensatz}}{6}

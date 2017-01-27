@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.22)  26 JAN 2017 14:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.22)  27 JAN 2017 14:02
 entering extended mode
 **C:/Users/landon/Documents/GitHub/books/graph*coloring*tools/gct.tex
 ("C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex"
@@ -441,18 +441,18 @@ Package marginnote Info: xpos seems to be 321.62137pt,
  [4] [5] [6]
 coloring edges
 Package marginnote Info: Margin note 13.1 is on absolute page 13
-(marginnote)              on input line 220.
+(marginnote)              on input line 249.
 Package marginnote Info: xpos seems to be 158.12285pt,
-(marginnote)             \marginnoterightadjust ignored on input line 220.
+(marginnote)             \marginnoterightadjust ignored on input line 249.
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:220: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:249: Missin
 g number, treated as zero
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:220: Illega
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:249: Illega
 l unit of measure (pt inserted)
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -462,18 +462,18 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 Package marginnote Info: Margin note 13.2 is on absolute page 13
-(marginnote)              on input line 220.
+(marginnote)              on input line 249.
 Package marginnote Info: xpos seems to be 181.84404pt,
-(marginnote)             \marginnoterightadjust ignored on input line 220.
+(marginnote)             \marginnoterightadjust ignored on input line 249.
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:220: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:249: Missin
 g number, treated as zero
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:220: Illega
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:249: Illega
 l unit of measure (pt inserted)
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -483,9 +483,9 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 Package marginnote Info: Margin note 13.3 is on absolute page 13
-(marginnote)              on input line 221.
+(marginnote)              on input line 250.
 Package marginnote Info: xpos seems to be 237.76854pt,
-(marginnote)             \marginnoterightadjust ignored on input line 221.
+(marginnote)             \marginnoterightadjust ignored on input line 250.
  [7
 
 
@@ -521,7 +521,7 @@ vertex transitive graphs
 potential potential tool
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:323: LaTeX 
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:352: LaTeX 
 Error: \begin{proof} on input line 151 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -538,13 +538,13 @@ or  <return>  to continue without it.
 ### semi simple group (level 1) entered at line 151 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 1814 strings out of 493921
- 20225 string characters out of 3147279
- 77769 words of memory out of 3000000
- 4976 multiletter control sequences out of 15000+200000
+ 1816 strings out of 493921
+ 20258 string characters out of 3147279
+ 77785 words of memory out of 3000000
+ 4978 multiletter control sequences out of 15000+200000
  10697 words of font info for 41 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,11n,31p,321b,304s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,11n,31p,321b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
 x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Pro
@@ -557,7 +557,7 @@ sfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on gct.pdf (27 pages, 207631 bytes).
+Output written on gct.pdf (27 pages, 210777 bytes).
 PDF statistics:
  141 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
