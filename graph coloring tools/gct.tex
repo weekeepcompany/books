@@ -49,6 +49,8 @@
 \newcommand{\brackets}[1]{\left[ #1 \right]}
 \newcommand{\DefinedAs}{\mathrel{\mathop:}=}
 
+\newcommand{\Q}{\mathbb{Q}}
+
 \newcommand{\pot}{\operatorname{pot}}
 
 \begin{document}
@@ -249,15 +251,63 @@ but then we have an $L$-coloring of $G$, a contradiction.
 Given an oriented graph $G$ that is not kernel-perfect, it is always possible to add arrows (possibly going the opposite way as a current arrow, forming a directed digon) 
 to get what we'll call a \emph{superoriented graph} that is kernel-perfect.  One way is just to add back arrows for each arrow, then any maximal independent set is a kernel.
 Theorem \ref{KernelPerfectListBound} holds for superoriented graphs by a nearly identical proof.  
-This can be useful as it gives us a way to trade in some slack in the $\card{L(v)} > d^+(v)$ bounds for kernel-perfection by adding some extra arrows.
+This can be useful as it gives us a way to trade in some slack in the $\card{L(v)} > d^+(v)$ bounds for kernel-perfection by adding some extra arrows.\aaside{example, picture}{}
 
 \begin{theorem}\label{KernelPerfectSuperListBound}
 If $L$ is a list assignment on a kernel-perfect superoriented graph $G$ such that $\card{L(v)} > d^+(v)$ for all $v \in V(G)$, then $G$ is $L$-colorable.
 \end{theorem}
 
+An acylic oriented graph is plainly kernel-perfect, so Theorem \ref{KernelPerfectListBound} generalizes Theorem \ref{SecondListBound}.  
+But this is not the only possible generalization of acylic that works, later\aaside{when?}{} we will see another based on counting certain substructures of the oriented graph. 
+This second generalization of acyclic does not generalize kernel-pefection and kernel-perfection does not generalize it.
 
-\section*{online list coloring}
-\section*{kernel tools}
+\section*{flows}
+Using Theorem \ref{KernelPerfectSuperListBound}, we will prove an easily-applicable sufficient condition for a graph to be $L$-colorable.  
+But first, we need a general lemma that gives graph orientations with specified constraints on their out-degrees.  This lemma can be proved directly, 
+but a detour into the theory of flows will give us the lemma and many other results for free.
+
+Let $V$ be a finite set.  A \emph{network} on $V$ is a function $\func{f}{V\times V}{\Q_{\ge 0}}$.  For a network $f$ and $X,Y \subseteq V$, put
+\[\card{X,Y} \DefinedAs \sum_{(x,y) \in X\times Y} f(x,y).\]
+If $f$ and $g$ are networks on $V$, then $f \le g$ just in case $f(u,v) \le g(u,v)$ for all $(u,v)\in V\times V$.
+Let $s,t \in V$ be two distinguished vertices.  The \emph{capacity} of a network $f$, written $\card{f}$, is the minimum of $\card{X, V}$ over all $X \subseteq V\setminus\set{t}$ with $s \in X$.
+
+We call a network $f$ a \emph{flow} if $\card{\set{v},V} = \card{V,\set{v}}$ for all $v \in V \setminus \set{s,t}$.
+The \emph{value} of a flow $f$ is $\size{f} \DefinedAs \card{\set{s},V} - \card{V,\set{s}}$.
+
+\begin{lemma}\label{FlowValues}
+If $f$ is a flow, then $\size{f} = \card{X, V} - \card{V, X}$ for every $X \subseteq V\setminus\set{t}$ with $s \in X$.
+\end{lemma}
+\begin{proof}
+\begin{align*}
+\card{X, V} - \card{V, X} &= \card{\set{s}, V} + \card{X\setminus\set{s}, V} - \card{V, \set{s}} - \card{V, X\setminus\set{s}}\\
+&= \size{f} + \card{X\setminus\set{s}, V} - \card{V, X\setminus\set{s}}\\
+&= \size{f}.
+\end{align*}
+\end{proof}
+
+\begin{lemma}\label{FlowAtMostCapacity}
+If $f \le g$ where $f$ is a flow on $V$ and $g$ is a network on $V$, then $\size{f} \le \card{g}$.
+\end{lemma}
+\begin{proof}
+Pick $X \subseteq V\setminus\set{t}$ with $s \in X$ such that $\card{X, V} = \card{g}$.  Then, by Lemma \ref{FlowValues}, $\size{f} = \card{X, V} - \card{V, X} \le \card{g}$.
+\end{proof}
+
+\begin{theorem}
+If $g$ is a network on $V$, then there exists a flow $f$ on $V$ with $f \le g$ such that $\size{f} = \card{g}$.
+\end{theorem}
+\begin{proof}
+Let $g$ be a network on $V$ and choose a flow $f \le g$ maximizing $\size{f}$.  By Lemma \ref{FlowAtMostCapacity}, $\size{f} \le \card{g}$.
+Let $X \subseteq V$ be the set of all $v \in V$ for which there is a sequence of distinct vertices $s = x_0, x_1, x_2, \ldots, x_n = v$ such that for each $0 \le i < n$, either
+$f(x_i, x_{i+1}) < g(x_i, x_{i+1})$ or $f(x_{i+1}, x_i) > 0$.  
+
+Suppose $t \in X$ and let $s = x_0, x_1, x_2, \ldots, x_n = t$ be a sequence witnessing this fact.  
+Choose $\epsilon > 0$ such that for each $0 \le i < n$, either $f(x_i, x_{i+1}) \le g(x_i, x_{i+1}) - \epsilon$ or $f(x_{i+1}, x_i) \ge \epsilon$.  Modify $f$ to get $f'$
+by setting $f'(x_i, x_{i+1}) = f(x_i, x_{i+1}) + \epsilon$ if $f(x_i, x_{i+1}) \le g(x_i, x_{i+1}) - \epsilon$ and $f'(x_{i+1}, x_i) = f(x_{i+1}, x_i) -\epsilon$ otherwise.
+Then $f'$ is a flow with $f' \le g$ and $\size{f'} > \size{f}$, violating maximality of $\size{f}$.
+
+So, $t \not \in X$.
+\end{proof}
+
 \subsection*{degree again}
 \subsection*{maximum independent covers}
 \section*{polynomial tools}

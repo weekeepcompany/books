@@ -3,14 +3,13 @@
 \contentsline {chapter}{\tocchapter {Chapter}{}{coloring vertices}}{3}
 \contentsline {section}{\tocsection {}{}{basic estimates}}{3}
 \contentsline {section}{\tocsection {}{}{list coloring}}{5}
-\contentsline {section}{\tocsection {}{}{online list coloring}}{7}
-\contentsline {section}{\tocsection {}{}{kernel tools}}{7}
-\contentsline {subsection}{\tocsubsection {}{}{degree again}}{7}
-\contentsline {subsection}{\tocsubsection {}{}{maximum independent covers}}{7}
-\contentsline {section}{\tocsection {}{}{polynomial tools}}{7}
-\contentsline {subsection}{\tocsubsection {}{}{combinatorial nullstellensatz}}{7}
-\contentsline {subsection}{\tocsubsection {}{}{coefficient formulae}}{7}
-\contentsline {subsection}{\tocsubsection {}{}{a combinatorial interpretation}}{7}
+\contentsline {section}{\tocsection {}{}{flows}}{7}
+\contentsline {subsection}{\tocsubsection {}{}{degree again}}{8}
+\contentsline {subsection}{\tocsubsection {}{}{maximum independent covers}}{8}
+\contentsline {section}{\tocsection {}{}{polynomial tools}}{8}
+\contentsline {subsection}{\tocsubsection {}{}{combinatorial nullstellensatz}}{8}
+\contentsline {subsection}{\tocsubsection {}{}{coefficient formulae}}{8}
+\contentsline {subsection}{\tocsubsection {}{}{a combinatorial interpretation}}{8}
 \contentsline {chapter}{\tocchapter {Chapter}{}{coloring edges}}{9}
 \contentsline {section}{\tocsection {}{}{hardness}}{10}
 \contentsline {chapter}{\tocchapter {Chapter}{}{vertex coloring, again}}{13}
