@@ -267,20 +267,20 @@ But first, we need a general lemma that gives graph orientations with specified 
 but a detour into the theory of flows will give us the lemma and many other results for free.
 
 Let $V$ be a finite set.  A \emph{network} on $V$ is a function $\func{f}{V\times V}{\Q_{\ge 0}}$.  For a network $f$ and $X,Y \subseteq V$, put
-\[\card{X,Y} \DefinedAs \sum_{(x,y) \in X\times Y} f(x,y).\]
+\[\card{X,Y}_f \DefinedAs \sum_{(x,y) \in X\times Y} f(x,y).\]
 If $f$ and $g$ are networks on $V$, then $f \le g$ just in case $f(u,v) \le g(u,v)$ for all $(u,v)\in V\times V$.
-Let $s,t \in V$ be two distinguished vertices.  The \emph{capacity} of a network $f$, written $\card{f}$, is the minimum of $\card{X, V}$ over all $X \subseteq V\setminus\set{t}$ with $s \in X$.
+Let $s,t \in V$ be two distinguished vertices.  The \emph{capacity} of a network $f$, written $\card{f}$, is the minimum of $\card{X, V}_f$ over all $X \subseteq V\setminus\set{t}$ with $s \in X$.
 
-We call a network $f$ a \emph{flow} if $\card{\set{v},V} = \card{V,\set{v}}$ for all $v \in V \setminus \set{s,t}$.
-The \emph{value} of a flow $f$ is $\size{f} \DefinedAs \card{\set{s},V} - \card{V,\set{s}}$.
+We call a network $f$ a \emph{flow} if $\card{\set{v},V}_f = \card{V,\set{v}}_f$ for all $v \in V \setminus \set{s,t}$.
+The \emph{value} of a flow $f$ is $\size{f} \DefinedAs \card{\set{s},V}_f - \card{V,\set{s}}_f$.
 
 \begin{lemma}\label{FlowValues}
-If $f$ is a flow, then $\size{f} = \card{X, V} - \card{V, X}$ for every $X \subseteq V\setminus\set{t}$ with $s \in X$.
+If $f$ is a flow, then $\size{f} = \card{X, V}_f - \card{V, X}_f$ for every $X \subseteq V\setminus\set{t}$ with $s \in X$.
 \end{lemma}
 \begin{proof}
 \begin{align*}
-\card{X, V} - \card{V, X} &= \card{\set{s}, V} + \card{X\setminus\set{s}, V} - \card{V, \set{s}} - \card{V, X\setminus\set{s}}\\
-&= \size{f} + \card{X\setminus\set{s}, V} - \card{V, X\setminus\set{s}}\\
+\card{X, V}_f - \card{V, X}_f &= \card{\set{s}, V}_f + \card{X\setminus\set{s}, V}_f - \card{V, \set{s}}_f - \card{V, X\setminus\set{s}}_f\\
+&= \size{f} + \card{X\setminus\set{s}, V}_f - \card{V, X\setminus\set{s}}_f\\
 &= \size{f}.
 \end{align*}
 \end{proof}
@@ -289,7 +289,7 @@ If $f$ is a flow, then $\size{f} = \card{X, V} - \card{V, X}$ for every $X \subs
 If $f \le g$ where $f$ is a flow on $V$ and $g$ is a network on $V$, then $\size{f} \le \card{g}$.
 \end{lemma}
 \begin{proof}
-Pick $X \subseteq V\setminus\set{t}$ with $s \in X$ such that $\card{X, V} = \card{g}$.  Then, by Lemma \ref{FlowValues}, $\size{f} = \card{X, V} - \card{V, X} \le \card{g}$.
+Pick $X \subseteq V\setminus\set{t}$ with $s \in X$ such that $\card{X, V}_g = \card{g}$.  Then, by Lemma \ref{FlowValues}, $\size{f} = \card{X, V}_f - \card{V, X}_f \le \card{X, V}_g = \card{g}$.
 \end{proof}
 
 \begin{theorem}
@@ -298,14 +298,21 @@ If $g$ is a network on $V$, then there exists a flow $f$ on $V$ with $f \le g$ s
 \begin{proof}
 Let $g$ be a network on $V$ and choose a flow $f \le g$ maximizing $\size{f}$.  By Lemma \ref{FlowAtMostCapacity}, $\size{f} \le \card{g}$.
 Let $X \subseteq V$ be the set of all $v \in V$ for which there is a sequence of distinct vertices $s = x_0, x_1, x_2, \ldots, x_n = v$ such that for each $0 \le i < n$, either
-$f(x_i, x_{i+1}) < g(x_i, x_{i+1})$ or $f(x_{i+1}, x_i) > 0$.  
+$f(x_i, x_{i+1}) < g(x_i, x_{i+1})$ or $f(x_{i+1}, x_i) > 0$.  Plainly $s \in X$.
 
 Suppose $t \in X$ and let $s = x_0, x_1, x_2, \ldots, x_n = t$ be a sequence witnessing this fact.  
 Choose $\epsilon > 0$ such that for each $0 \le i < n$, either $f(x_i, x_{i+1}) \le g(x_i, x_{i+1}) - \epsilon$ or $f(x_{i+1}, x_i) \ge \epsilon$.  Modify $f$ to get $f'$
 by setting $f'(x_i, x_{i+1}) = f(x_i, x_{i+1}) + \epsilon$ if $f(x_i, x_{i+1}) \le g(x_i, x_{i+1}) - \epsilon$ and $f'(x_{i+1}, x_i) = f(x_{i+1}, x_i) -\epsilon$ otherwise.
 Then $f'$ is a flow with $f' \le g$ and $\size{f'} > \size{f}$, violating maximality of $\size{f}$.
 
-So, $t \not \in X$.
+So, $t \not \in X$.  Since $v \in V \setminus X$ is not in $X$, we must have $f(x, v) = g(x,v)$ and $f(v,x) = 0$ for all $x \in X$.  Hence
+\begin{align*}
+\size{f} &= \card{X, V}_f - \card{V, X}_f \\
+&= \card{X, X}_f + \card{X, V\setminus X}_f - \card{X, X}_f - \card{V\setminus X, X}_f\\
+&= \card{X, V\setminus X}_f - \card{V\setminus X, X}_f\\
+&= \card{X, V\setminus X}_g\\
+&\ge \card{g}.
+\end{align*}
 \end{proof}
 
 \subsection*{degree again}
