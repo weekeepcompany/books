@@ -269,7 +269,7 @@ but a detour into the theory of flows will give us the lemma and many other resu
 Let $V$ be a finite set.  A \emph{network} on $V$ is a function $\func{f}{V\times V}{\Q_{\ge 0}}$.  For a network $f$ and $X,Y \subseteq V$, put
 \[\card{X,Y}_f \DefinedAs \sum_{(x,y) \in X\times Y} f(x,y).\]
 If $f$ and $g$ are networks on $V$, then $f \le g$ just in case $f(u,v) \le g(u,v)$ for all $(u,v)\in V\times V$.
-Let $s,t \in V$ be two distinguished vertices.  The \emph{capacity} of a network $f$, written $\card{f}$, is the minimum of $\card{X, V}_f$ over all $X \subseteq V\setminus\set{t}$ with $s \in X$.
+Let $s,t \in V$ be two distinguished vertices.  The \emph{capacity} of a network $f$, written $\card{f}$, is the minimum of $\card{X, V\setminus X}_f$ over all $X \subseteq V\setminus\set{t}$ with $s \in X$.
 
 We call a network $f$ a \emph{flow} if $\card{\set{v},V}_f = \card{V,\set{v}}_f$ for all $v \in V \setminus \set{s,t}$.
 The \emph{value} of a flow $f$ is $\size{f} \DefinedAs \card{\set{s},V}_f - \card{V,\set{s}}_f$.
@@ -289,7 +289,14 @@ If $f$ is a flow, then $\size{f} = \card{X, V}_f - \card{V, X}_f$ for every $X \
 If $f \le g$ where $f$ is a flow on $V$ and $g$ is a network on $V$, then $\size{f} \le \card{g}$.
 \end{lemma}
 \begin{proof}
-Pick $X \subseteq V\setminus\set{t}$ with $s \in X$ such that $\card{X, V}_g = \card{g}$.  Then, by Lemma \ref{FlowValues}, $\size{f} = \card{X, V}_f - \card{V, X}_f \le \card{X, V}_g = \card{g}$.
+Pick $X \subseteq V\setminus\set{t}$ with $s \in X$ such that $\card{X, V\setminus X}_g = \card{g}$.  Then, by Lemma \ref{FlowValues}, 
+\begin{align*}
+\size{f} &= \card{X, V}_f - \card{V, X}_f \\
+&= \card{X, V\setminus X}_f + \card{X,X}_f - \card{V\setminus X, X}_f - \card{X,X}_f \\
+&= \card{X, V\setminus X}_f - \card{V\setminus X, X}_f\\
+&\le \card{X, V\setminus X}_g \\
+&= \card{g}.
+\end{align*}
 \end{proof}
 
 \begin{theorem}
