@@ -1,45 +1,54 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100) (preloaded format=pdflatex 2016.12.12)  13 DEC 2016 09:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.22)  29 JAN 2017 09:26
 entering extended mode
-**"C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex"
+**C:/Users/landon/Documents/GitHub/books/graph*coloring*tools/gct.tex
 ("C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex"
-LaTeX2e <2016/03/31> patch level 3
-Babel <3.9r> and hyphenation patterns for 72 language(s) loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsbook.cls"
-Document Class: amsbook 2015/03/04 v2.20.2
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsbook.cls"
+Document Class: amsbook 2009/07/02 v2.20.1
 \linespacing=\dimen102
 \normalparindent=\dimen103
 \normaltopskip=\skip41
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2016/06/28 v2.15d AMS math features
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip42
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
-Package: amstext 2000/06/29 v2.01 AMS text
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
-File: amsgen.sty 1999/11/30 v2.0 generic functions
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks14
 \ex@=\dimen104
-)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen105
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
-Package: amsopn 2016/03/08 v2.02 operator names
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count79
-LaTeX Info: Redefining \frac on input line 199.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count80
 \leftroot@=\count81
-LaTeX Info: Redefining \overline on input line 297.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count82
 \DOTSCASE@=\count83
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen106
-LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count84
 \c@MaxMatrixCols=\count85
 \dotsspace@=\muskip10
@@ -60,20 +69,20 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \multlinegap=\skip43
 \multlinetaggap=\skip44
 \mathdisplay@stack=\toks18
-LaTeX Info: Redefining \[ on input line 2739.
-LaTeX Info: Redefining \] on input line 2740.
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 367.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-\copyins=\insert199
+\copyins=\insert233
 \abstractbox=\box28
 \listisep=\skip45
 \c@part=\count91
@@ -99,9 +108,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \dth@everypar=\toks24
 )
 (C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\marginnote\marginnote.sty
-Package: marginnote 2012/03/29 v1.1i non floating margin notes for LaTeX
+Package: marginnote 2016/10/21 v1.2a non floating margin notes for LaTeX
 \c@mn@abspage=\count100
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
 \c@acknowledgement=\count101
@@ -122,33 +131,34 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 \c@problem=\count116
 \c@proposition=\count117
 \c@remark=\count118
-\c@solution=\count119
-\c@summary=\count120
-\c@theorem=\count121
-(gct.aux)
-\openout1 = `gct.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Try loading font information for U+msa on input line 51.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+\c@observation=\count119
+\c@question=\count120
+\c@solution=\count121
+\c@summary=\count122
+\c@theorem=\count123
+("C:\Users\landon\Documents\GitHub\books\graph coloring tools\gct.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Try loading font information for U+msa on input line 57.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 51.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+LaTeX Font Info:    Try loading font information for U+msb on input line 57.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package marginnote Info: \pdfoutput not 0 and \pdflastxpos available.
+Package marginnote Info: \pdfoutput not 0 or unimportant and
+(marginnote)             \pdflastxpos or \lastxpos available.
 (marginnote)             Extended position detection mode activated.
 [1
 
@@ -157,10 +167,8 @@ Package marginnote Info: \pdfoutput not 0 and \pdflastxpos available.
 
 {C:/Users/landon/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
 Contents
-(gct.toc)
+("C:\Users\landon\Documents\GitHub\books\graph coloring tools\gct.toc")
 \tf@toc=\write3
-\openout3 = `gct.toc'.
-
 [3
 
 
@@ -175,29 +183,29 @@ preface
 ]
 graphs
 Package marginnote Info: Margin note 7.1 is on absolute page 7
-(marginnote)              on input line 65.
+(marginnote)              on input line 71.
 Package marginnote Info: xpos seems to be 348.60248pt,
-(marginnote)             \marginnoterightadjust ignored on input line 65.
+(marginnote)             \marginnoterightadjust ignored on input line 71.
 Package marginnote Info: Margin note 7.2 is on absolute page 7
-(marginnote)              on input line 65.
+(marginnote)              on input line 71.
 Package marginnote Info: xpos seems to be 221.03712pt,
-(marginnote)             \marginnoterightadjust ignored on input line 65.
+(marginnote)             \marginnoterightadjust ignored on input line 71.
 Package marginnote Info: Margin note 7.3 is on absolute page 7
-(marginnote)              on input line 68.
+(marginnote)              on input line 74.
 Package marginnote Info: xpos seems to be 229.30019pt,
-(marginnote)             \marginnoterightadjust ignored on input line 68.
+(marginnote)             \marginnoterightadjust ignored on input line 74.
 Package marginnote Info: Margin note 7.4 is on absolute page 7
-(marginnote)              on input line 69.
+(marginnote)              on input line 75.
 Package marginnote Info: xpos seems to be 278.41096pt,
-(marginnote)             \marginnoterightadjust ignored on input line 69.
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:69: Missing
+(marginnote)             \marginnoterightadjust ignored on input line 75.
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:75: Missing
  number, treated as zero
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:69: Illegal
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:75: Illegal
  unit of measure (pt inserted)
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -207,21 +215,21 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 Package marginnote Info: Margin note 7.5 is on absolute page 7
-(marginnote)              on input line 71.
+(marginnote)              on input line 77.
 Package marginnote Info: xpos seems to be 394.87949pt,
-(marginnote)             \marginnoterightadjust ignored on input line 71.
+(marginnote)             \marginnoterightadjust ignored on input line 77.
 Package marginnote Info: Margin note 7.6 is on absolute page 7
-(marginnote)              on input line 72.
+(marginnote)              on input line 78.
 Package marginnote Info: xpos seems to be 158.95445pt,
-(marginnote)             \marginnoterightadjust ignored on input line 72.
+(marginnote)             \marginnoterightadjust ignored on input line 78.
 Package marginnote Info: Margin note 7.7 is on absolute page 7
-(marginnote)              on input line 72.
+(marginnote)              on input line 78.
 Package marginnote Info: xpos seems to be 158.95445pt,
-(marginnote)             \marginnoterightadjust ignored on input line 72.
+(marginnote)             \marginnoterightadjust ignored on input line 78.
 Package marginnote Info: Margin note 7.8 is on absolute page 7
-(marginnote)              on input line 73.
+(marginnote)              on input line 79.
 Package marginnote Info: xpos seems to be 181.24355pt,
-(marginnote)             \marginnoterightadjust ignored on input line 73.
+(marginnote)             \marginnoterightadjust ignored on input line 79.
  [1
 
 
@@ -231,18 +239,18 @@ Package marginnote Info: xpos seems to be 181.24355pt,
 ]
 coloring vertices
 Package marginnote Info: Margin note 9.1 is on absolute page 9
-(marginnote)              on input line 84.
+(marginnote)              on input line 90.
 Package marginnote Info: xpos seems to be 217.78368pt,
-(marginnote)             \marginnoterightadjust ignored on input line 84.
+(marginnote)             \marginnoterightadjust ignored on input line 90.
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:84: Missing
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:90: Missing
  number, treated as zero
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:84: Illegal
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:90: Illegal
  unit of measure (pt inserted)
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -252,26 +260,26 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 Package marginnote Info: Margin note 9.2 is on absolute page 9
-(marginnote)              on input line 85.
+(marginnote)              on input line 91.
 Package marginnote Info: xpos seems to be 408.81076pt,
-(marginnote)             \marginnoterightadjust ignored on input line 85.
+(marginnote)             \marginnoterightadjust ignored on input line 91.
 Package marginnote Info: Margin note 9.3 is on absolute page 9
-(marginnote)              on input line 85.
+(marginnote)              on input line 91.
 Package marginnote Info: xpos seems to be 451.98535pt,
-(marginnote)             \marginnoterightadjust ignored on input line 85.
+(marginnote)             \marginnoterightadjust ignored on input line 91.
 Package marginnote Info: Margin note 9.4 is on absolute page 9
-(marginnote)              on input line 86.
+(marginnote)              on input line 92.
 Package marginnote Info: xpos seems to be 269.40465pt,
-(marginnote)             \marginnoterightadjust ignored on input line 86.
+(marginnote)             \marginnoterightadjust ignored on input line 92.
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:86: Missing
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:92: Missing
  number, treated as zero
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:86: Illegal
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:92: Illegal
  unit of measure (pt inserted)
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -281,18 +289,18 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 Package marginnote Info: Margin note 9.5 is on absolute page 9
-(marginnote)              on input line 87.
+(marginnote)              on input line 93.
 Package marginnote Info: xpos seems to be 334.99576pt,
-(marginnote)             \marginnoterightadjust ignored on input line 87.
+(marginnote)             \marginnoterightadjust ignored on input line 93.
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:87: Missing
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:93: Missing
  number, treated as zero
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:87: Illegal
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:93: Illegal
  unit of measure (pt inserted)
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -302,33 +310,33 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 Package marginnote Info: Margin note 9.6 is on absolute page 9
-(marginnote)              on input line 87.
+(marginnote)              on input line 93.
 Package marginnote Info: xpos seems to be 334.99576pt,
-(marginnote)             \marginnoterightadjust ignored on input line 87.
+(marginnote)             \marginnoterightadjust ignored on input line 93.
 Package marginnote Info: Margin note 9.7 is on absolute page 9
-(marginnote)              on input line 87.
+(marginnote)              on input line 93.
 Package marginnote Info: xpos seems to be 334.99576pt,
-(marginnote)             \marginnoterightadjust ignored on input line 87.
+(marginnote)             \marginnoterightadjust ignored on input line 93.
 Package marginnote Info: Margin note 9.8 is on absolute page 10
-(marginnote)              on input line 111.
+(marginnote)              on input line 117.
 Package marginnote Info: xpos seems to be 192.1962pt,
-(marginnote)             \marginnoteleftadjust ignored on input line 111.
+(marginnote)             \marginnoteleftadjust ignored on input line 117.
 Package marginnote Info: Margin note 9.9 is on absolute page 10
-(marginnote)              on input line 111.
+(marginnote)              on input line 117.
 Package marginnote Info: xpos seems to be 192.1962pt,
-(marginnote)             \marginnoteleftadjust ignored on input line 111.
+(marginnote)             \marginnoteleftadjust ignored on input line 117.
  [3]
 Package marginnote Info: Margin note 10.1 is on absolute page 10
-(marginnote)              on input line 117.
+(marginnote)              on input line 123.
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:117: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:123: Missin
 g number, treated as zero
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:117: Illega
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:123: Illega
 l unit of measure (pt inserted)
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -338,26 +346,26 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 Package marginnote Info: xpos seems to be 355.33339pt,
-(marginnote)             \marginnoteleftadjust ignored on input line 117.
+(marginnote)             \marginnoteleftadjust ignored on input line 123.
 Package marginnote Info: Margin note 10.2 is on absolute page 10
-(marginnote)              on input line 118.
+(marginnote)              on input line 124.
 Package marginnote Info: xpos seems to be 422.95892pt,
-(marginnote)             \marginnoteleftadjust ignored on input line 118.
+(marginnote)             \marginnoteleftadjust ignored on input line 124.
 Package marginnote Info: Margin note 10.3 is on absolute page 10
-(marginnote)              on input line 118.
+(marginnote)              on input line 124.
 Package marginnote Info: xpos seems to be 422.95892pt,
-(marginnote)             \marginnoteleftadjust ignored on input line 118.
+(marginnote)             \marginnoteleftadjust ignored on input line 124.
 Package marginnote Info: Margin note 10.4 is on absolute page 10
-(marginnote)              on input line 134.
+(marginnote)              on input line 140.
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:134: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:140: Missin
 g number, treated as zero
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:134: Illega
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:140: Illega
 l unit of measure (pt inserted)
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -367,29 +375,8 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 Package marginnote Info: xpos seems to be 464.55319pt,
-(marginnote)             \marginnoteleftadjust ignored on input line 134.
+(marginnote)             \marginnoteleftadjust ignored on input line 140.
 Package marginnote Info: Margin note 10.5 is on absolute page 10
-(marginnote)              on input line 135.
-
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:135: Missin
-g number, treated as zero
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:135: Illega
-l unit of measure (pt inserted)
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-Package marginnote Info: xpos seems to be 178.0656pt,
-(marginnote)             \marginnoteleftadjust ignored on input line 135.
-Package marginnote Info: Margin note 10.6 is on absolute page 10
 (marginnote)              on input line 141.
 
 C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:141: Missin
@@ -408,19 +395,40 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-Package marginnote Info: xpos seems to be 186.03651pt,
+Package marginnote Info: xpos seems to be 178.0656pt,
 (marginnote)             \marginnoteleftadjust ignored on input line 141.
-Package marginnote Info: Margin note 10.7 is on absolute page 10
-(marginnote)              on input line 142.
+Package marginnote Info: Margin note 10.6 is on absolute page 10
+(marginnote)              on input line 147.
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:142: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:147: Missin
 g number, treated as zero
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:142: Illega
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:147: Illega
+l unit of measure (pt inserted)
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Package marginnote Info: xpos seems to be 186.03651pt,
+(marginnote)             \marginnoteleftadjust ignored on input line 147.
+Package marginnote Info: Margin note 10.7 is on absolute page 10
+(marginnote)              on input line 148.
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:148: Missin
+g number, treated as zero
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:148: Illega
 l unit of measure (pt inserted)
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -430,25 +438,21 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 Package marginnote Info: xpos seems to be 321.62137pt,
-(marginnote)             \marginnoteleftadjust ignored on input line 142.
- [4] [5] [6
-
-
-]
-coloring edges
+(marginnote)             \marginnoteleftadjust ignored on input line 148.
+ [4] [5] [6]
 Package marginnote Info: Margin note 13.1 is on absolute page 13
-(marginnote)              on input line 187.
-Package marginnote Info: xpos seems to be 158.12285pt,
-(marginnote)             \marginnoterightadjust ignored on input line 187.
+(marginnote)              on input line 255.
+Package marginnote Info: xpos seems to be 382.48131pt,
+(marginnote)             \marginnoterightadjust ignored on input line 255.
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:187: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:255: Missin
 g number, treated as zero
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:187: Illega
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:255: Illega
 l unit of measure (pt inserted)
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -458,18 +462,18 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 Package marginnote Info: Margin note 13.2 is on absolute page 13
-(marginnote)              on input line 187.
-Package marginnote Info: xpos seems to be 181.84404pt,
-(marginnote)             \marginnoterightadjust ignored on input line 187.
+(marginnote)              on input line 276.
+Package marginnote Info: xpos seems to be 365.60397pt,
+(marginnote)             \marginnoterightadjust ignored on input line 276.
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:187: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:276: Missin
 g number, treated as zero
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:187: Illega
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:276: Illega
 l unit of measure (pt inserted)
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -479,43 +483,111 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 Package marginnote Info: Margin note 13.3 is on absolute page 13
-(marginnote)              on input line 188.
-Package marginnote Info: xpos seems to be 237.76854pt,
-(marginnote)             \marginnoterightadjust ignored on input line 188.
+(marginnote)              on input line 280.
+Package marginnote Info: xpos seems to be 147.17531pt,
+(marginnote)             \marginnoterightadjust ignored on input line 280.
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:280: Missin
+g number, treated as zero
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:280: Illega
+l unit of measure (pt inserted)
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
  [7] [8] [9] [10
 
 
 ]
+coloring edges
+Package marginnote Info: Margin note 17.1 is on absolute page 17
+(marginnote)              on input line 364.
+Package marginnote Info: xpos seems to be 158.12285pt,
+(marginnote)             \marginnoterightadjust ignored on input line 364.
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:364: Missin
+g number, treated as zero
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:364: Illega
+l unit of measure (pt inserted)
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Package marginnote Info: Margin note 17.2 is on absolute page 17
+(marginnote)              on input line 364.
+Package marginnote Info: xpos seems to be 181.84404pt,
+(marginnote)             \marginnoterightadjust ignored on input line 364.
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:364: Missin
+g number, treated as zero
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:364: Illega
+l unit of measure (pt inserted)
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Package marginnote Info: Margin note 17.3 is on absolute page 17
+(marginnote)              on input line 365.
+Package marginnote Info: xpos seems to be 237.76854pt,
+(marginnote)             \marginnoterightadjust ignored on input line 365.
+ [11] [12] [13] [14
+
+
+]
 vertex coloring, again
- [11] [12
-
-
-]
-edge coloring, again
- [13] [14
-
-
-]
-shuffle tool
  [15] [16
 
 
 ]
-independent transversalls
+edge coloring, again
  [17] [18
 
 
 ]
-vertex transitive graphs
+shuffle tool
  [19] [20
+
+
+]
+independent transversalls
+ [21] [22
+
+
+]
+vertex transitive graphs
+ [23] [24
 
 
 ]
 potential potential tool
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:327: LaTeX 
-Error: \begin{proof} on input line 148 ended by \end{document}.
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:467: LaTeX 
+Error: \begin{proof} on input line 154 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help
@@ -524,36 +596,37 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-[21]
-(gct.aux) )
+[25]
+("C:\Users\landon\Documents\GitHub\books\graph coloring tools\gct.aux") )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 148 (\begingroup)
+### semi simple group (level 1) entered at line 154 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 1809 strings out of 493367
- 19979 string characters out of 3137292
- 82793 words of memory out of 3000000
- 5194 multiletter control sequences out of 15000+200000
+ 1830 strings out of 493921
+ 20468 string characters out of 3147279
+ 79932 words of memory out of 3000000
+ 4992 multiletter control sequences out of 15000+200000
  10697 words of font info for 41 fonts, out of 3000000 for 9000
- 1289 hyphenation exceptions out of 8191
- 34i,11n,31p,323b,301s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-ex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on gct.pdf (27 pages, 202870 bytes).
+ 1002 hyphenation exceptions out of 8191
+ 34i,11n,31p,321b,311s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
+x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on gct.pdf (31 pages, 246613 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
+ 162 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

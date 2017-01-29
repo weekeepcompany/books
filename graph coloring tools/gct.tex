@@ -26,6 +26,8 @@
 \newtheorem{problem}{Problem}
 \newtheorem{proposition}{Proposition}
 \newtheorem{remark}{Remark}
+\newtheorem{observation}{Observation}
+\newtheorem{question}{Question}
 \newtheorem{solution}{Solution}
 \newtheorem{summary}{Summary}
 \newtheorem{theorem}{Theorem}
@@ -47,6 +49,10 @@
 \newcommand{\parens}[1]{\left( #1 \right)}
 \newcommand{\brackets}[1]{\left[ #1 \right]}
 \newcommand{\DefinedAs}{\mathrel{\mathop:}=}
+
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\pot}{\operatorname{pot}}
 
 \begin{document}
 \frontmatter
@@ -172,6 +178,177 @@ that $y_1$ and $y_3$ each have exactly one neighbor in $X$ and $\Delta(G) - 1$ n
 Now $\card{A\cap B} = \card{A} + \card{B} - \card{A\cup B} \ge 2(\Delta(G) - 1) - d(y_1) \ge \Delta(G) - 2 > 0$.  But there can't be a vertex
 in $A \cap B$ since it would be adjacent to $y_1,y_2,y_3$ as well as $\Delta(G) - 2$ vertices in $A$ and thus have degree greater than $\Delta(G)$, a contradiction. 
 
+
+\section*{list coloring}
+When attempting to $k$-color a graph $G$, it will often be convenient to first $k$-color $G[S]$ for some $S \subset V(G)$ and then try to 
+$k$-color $G-S$ in a compatible manner. To make this precise, think of each vertex in $G$ starting with a list of $k$ permissible colors, say $\irange{k}$.
+When we $k$-color $G[S]$, the colors used on $N(v) \cap S$ are no longer permissible for each $v \in V(G-S)$.  For $v \in V(G-S)$, let $L(v)$ be the permissible colors
+for $v$ after $k$-coloring $G[S]$.  Now our problem is to pick $c_v \in L(v)$ for each $v \in V(G-S)$ such that $c_x \ne c_y$ whenever $xy \in E(G-S)$.  This is the
+\emph{list coloring} problem.
+
+The list coloring problem arose as a subproblem in our attempt to $k$-color a graph.  By taking it out of this context and viewing list coloring as a first-class problem in its own
+right, we will be able to prove more general theorems while also simplifying proofs.  A \emph{list assignment} on a graph $G$ gives a set of colors $L(v)$ to each $v \in V(G)$.  
+If there is $c_v \in L(v)$ for each $v \in V(G)$ such that $c_x \ne c_y$ whenever $xy \in E(G)$, then $G$ is \emph{$L$-colorable}.
+
+\begin{theorem}\label{FirstListBound}
+If $L$ is a list assignment on a graph $G$ such that $\card{L(v)} > d(v)$ for all $v \in V(G)$, then $G$ is $L$-colorable.
+\end{theorem}
+\begin{proof}
+Color each vertex in turn using a color in its list not appearing on any of its colored neighbors.  
+This succeeds since each vertex has more permissible colors than neighbors.
+\end{proof}
+
+The requirement $\card{L(v)} > d(v)$ in Theorem \ref{FirstListBound} is quite strong, in the algorithm we really only need $L(v)$ to have more colors 
+than \emph{colored} neighbors rather than more colors than neighbors.  We can encode this extra information by \emph{orienting} the edges of $G$; that is, turning
+each edge into an arrow pointed one way or the other.  If $G$ is an oriented graph, the \emph{out-degree} of a vertex $v \in V(G)$, written $d^+(v)$, is the number of arrows
+pointing away from $v$.  An oriented graph is \emph{acyclic} if there is no sequence of arrows that ends where it starts.  An oriented graph is $L$-colorable just in case its
+underlying undirected graph is $L$-colorable.
+
+\begin{theorem}\label{SecondListBound}
+If $L$ is a list assignment on an acyclic oriented graph $G$ such that $\card{L(v)} > d^+(v)$ for all $v \in V(G)$, then $G$ is $L$-colorable.
+\end{theorem}
+\begin{proof}
+Suppose there is a list assignment $L$ on an acyclic oriented graph $G$ such that $\card{L(v)} > d^+(v)$ for all $v \in V(G)$, but $G$ is not $L$-colorable.  Then
+we may pick such an $L$ and $G$ with $\card{G}$ as small as possible.  Plainly, $\card{G} \ge 2$. Since $\card{G}$ is finite and $G$ is acyclic, there must be $w \in V(G)$ with $d^+(w) = 0$.
+Since $\card{L(w)} > d^+(w)$, we may choose $c \in L(w)$ and color $w$ with $c$.  Now let $L'$ be the list assignment on $G-w$ where $L'(v) = L(v) \setminus \set{c}$ if $v$
+is adjacent to $w$ and $L'(v) = L(v)$ otherwise.  Since $d^+(w) = 0$, for any vertex $v$ of $G-w$ that lost $c$ from its list, we have $d_{G-w}^+(v) = d^+(v) - 1$, so 
+$\card{L'(v)} > d_{G-w}^+(v)$ for all $v \in V(G-w)$.  Since $\card{G-w} < \card{G}$ and $G-w$ is also acyclic, applying the theorem shows that $G-w$ is $L'$-colorable, but then we have an $L$-coloring
+of $G$, a contradiction.
+\end{proof}
+
+Theorem \ref{SecondListBound} is no longer true if we drop ``acyclic'' from the hypotheses; take a cyclically directed triangle for example.  
+But there are ways to replace ``acyclic'' with weaker hypotheses and still get a true theorem.  In outline-form, the proof of Theorem \ref{SecondListBound} went like this: 
+find a vertex $w$ we can color with some color $c$ such that $G-w$ is still acyclic and any vertex in $G-w$ that loses $c$ from its list also has its out-degree go down. 
+This can be generalized in a couple natural ways.  First, we could color an independent set $I$ of vertices with $c$ instead of just a single vertex.  Second, we could replace ``acyclic'' with
+some other property of oriented graphs, say a made-up property ``agliplic'', and require that $G-I$ remain agliplic.
+
+It will be convenient to work with an equivalent dual version of list assignments.  
+Instead of assigning a list of colors to each vertex, we assign a set of vertices to each color.  Given a set of colors $P$, a \emph{$P$-assignment} on a graph $G$ is a function
+from $P$ to the subsets of $V(G)$.  For a list assigment $L$, let the \emph{pot of $L$} be the set of all colors appearing in at least one $L(v)$; that is, $\pot(L) \DefinedAs \bigcup_{v \in V(G)} L(v)$.
+Then $L$ gives rise to the $\pot(L)$-assignment $C_L$ given by $C_L(c) \DefinedAs \setb{v}{V(G)}{c \in L(v)}$.
+
+\begin{observation}
+$G$ is $L$-colorable just in case there are independent sets $I_c \subseteq C_L(c)$ for each $c \in \pot(L)$ that together cover $V(G)$.
+\end{observation}
+
+Viewing a list assignment in this dual fashion, there is a natural candidate for a choice of $I$ to color with $c$ when trying to prove Theorem \ref{SecondListBound} for agliplic oriented graphs.
+We want to find independent $I \subseteq C_L(c)$ such that every $v \in C_L(c) \setminus I$ has an out-neighbor in $I$.  Such an $I$ is a \emph{kernel} in $G\brackets{C_L(c)}$.  
+So, we could try taking agliplic to mean ``$G\brackets{C_L(c)}$ has a kernel $I_c$ for all $c \in \pot(L)$''.  
+That almost works, but we have no way of guaranteeing that $G-I_c$ is still agliplic.  We can fix that by requiring that $G[S]$ have a kernel for \emph{every} $S\subseteq V(G)$.  
+Instead of agliplic, we call an oriented graph with this property \emph{kernel-perfect}.
+
+\begin{theorem}\label{KernelPerfectListBound}
+If $L$ is a list assignment on a kernel-perfect oriented graph $G$ such that $\card{L(v)} > d^+(v)$ for all $v \in V(G)$, then $G$ is $L$-colorable.
+\end{theorem}
+\begin{proof}
+Suppose there is a list assignment $L$ on a kernel-perfect oriented graph $G$ such that $\card{L(v)} > d^+(v)$ for all $v \in V(G)$, but $G$ is not $L$-colorable.  Then
+we may pick such an $L$ and $G$ with $\card{G}$ as small as possible.  Pick $c \in \pot(L)$ and let $I$ be a kernel in $G\brackets{C_L(c)}$.  Color all vertices in $I$ with $c$
+and let $L'$ be the list assignment on $G-I$ where $L'(v) = L(v) \setminus \set{c}$ if $v \in C_L(c)$ and $L'(v) = L(v)$ otherwise.  
+Since every $v \in C_L(c)$ has an out-neighbor in $I$, we have $d_{G-I}^+(v) \le d^+(v) - 1$ , so 
+$\card{L'(v)} > d_{G-I}^+(v)$ for all $v \in V(G-I)$.  Since $\card{G-I} < \card{G}$ and $G-I$ is also kernel-perfect, applying the theorem shows that $G-I$ is $L'$-colorable, 
+but then we have an $L$-coloring of $G$, a contradiction.
+\end{proof}
+
+Given an oriented graph $G$ that is not kernel-perfect, it is always possible to add arrows (possibly going the opposite way as a current arrow, forming a directed digon) 
+to get what we'll call a \emph{superoriented graph} that is kernel-perfect.  One way is just to add back arrows for each arrow, then any maximal independent set is a kernel.
+Theorem \ref{KernelPerfectListBound} holds for superoriented graphs by a nearly identical proof.  
+This can be useful as it gives us a way to trade in some slack in the $\card{L(v)} > d^+(v)$ bounds for kernel-perfection by adding some extra arrows.\aaside{example, picture}{}
+
+\begin{theorem}\label{KernelPerfectSuperListBound}
+If $L$ is a list assignment on a kernel-perfect superoriented graph $G$ such that $\card{L(v)} > d^+(v)$ for all $v \in V(G)$, then $G$ is $L$-colorable.
+\end{theorem}
+
+\begin{lemma}\label{KostochkaYanceyKernelLemma}
+If $G$ is a superoriented graph with an independent set $I$ such that all edges in $G-I$ have back arrows, then $G$ is kernel-perfect.
+\end{lemma}
+\begin{proof}
+Suppose there is a non-kernel-perfect superoriented graph $G$ with independent set $I$ such that all edges in $G-I$ have back arrows.  Then we may pick such a $G$ with $\card{G}$
+as small as possible.  Since $G$ is not kernel-perfect, there is $X \subseteq V(G)$ such that $G[X]$ has no kernel.  If $\card{X} < \card{G}$, 
+then we could apply the theorem to $G[X]$ to get a kernel, so we must have $X = V(G)$.  So $I$ is not a kernel in $G$ and hence there is $v \in V(G-I)$ 
+with none of its incident arrows pointing into $I$.  Remove $v$ and all its neighbors from $G$ to get a superoriented graph $H$. Since $\card{H} < \card{G}$, we may apply the
+theorem to $H$ to get a kernel $S$ in $H$.  But then $S \cup \set{v}$ is a kernel in $G$ since any vertex other than $v$ in $G-H$ is either in $I$ and hence 
+has an arrow to $v$ or is in $G-I$ and hence has a back arrow to $v$, a contradiction.
+\end{proof}
+
+\begin{question}
+Lemma \ref{KostochkaYanceyKernelLemma} says that if we take a graph $G$ with an independent set $I$ and direct all the edges of $G-I$ both ways and the edges 
+between $I$ and $V(G-I)$ arbitrarily, we get a kernel-perfect superoriented graph.  Can we classify the pairs $(G, F)$ where $G$ is a graph and $F \subseteq E(G)$ such that
+every superorientation of $G$ in which all edges in $F$ are bidirected are kernel-perfect?  \aaside{a few examples known}{}
+\end{question}
+
+An acylic oriented graph is plainly kernel-perfect, so Theorem \ref{KernelPerfectListBound} generalizes Theorem \ref{SecondListBound}.  
+But this is not the only possible generalization of acylic that works, later\aaside{when?}{} we will see another based on counting certain substructures of the oriented graph. 
+This second generalization of acyclic does not generalize kernel-pefection and kernel-perfection does not generalize it.
+
+\section*{flows}
+Using Theorem \ref{KernelPerfectSuperListBound} and Lemma \ref{KostochkaYanceyKernelLemma}, we will prove an easily-applicable sufficient condition for a graph to be $L$-colorable.  
+But first, we need a general lemma that gives graph orientations with specified constraints on their out-degrees.  This lemma can be proved directly, 
+but a detour into the theory of flows will give us the lemma and many other results for free.
+
+Let $V$ be a finite set.  A \emph{network} on $V$ is a function $\func{f}{V\times V}{\Q_{\ge 0}}$.  For a network $f$ and $X,Y \subseteq V$, put
+\[\card{X,Y}_f \DefinedAs \sum_{(x,y) \in X\times Y} f(x,y).\]
+If $f$ and $g$ are networks on $V$, then $f \le g$ just in case $f(u,v) \le g(u,v)$ for all $(u,v)\in V\times V$.
+Let $s,t \in V$ be two distinguished vertices.  The \emph{capacity} of a network $f$, written $\card{f}$, is the minimum of $\card{X, V\setminus X}_f$ over all $X \subseteq V\setminus\set{t}$ with $s \in X$.
+
+We call a network $f$ a \emph{flow} if $\card{\set{v},V}_f = \card{V,\set{v}}_f$ for all $v \in V \setminus \set{s,t}$.
+The \emph{value} of a flow $f$ is $\size{f} \DefinedAs \card{\set{s},V}_f - \card{V,\set{s}}_f$.
+
+\begin{lemma}\label{FlowValues}
+If $f$ is a flow, then $\size{f} = \card{X, V}_f - \card{V, X}_f$ for every $X \subseteq V\setminus\set{t}$ with $s \in X$.
+\end{lemma}
+\begin{proof}
+\begin{align*}
+\card{X, V}_f - \card{V, X}_f &= \card{\set{s}, V}_f + \card{X\setminus\set{s}, V}_f - \card{V, \set{s}}_f - \card{V, X\setminus\set{s}}_f\\
+&= \size{f} + \card{X\setminus\set{s}, V}_f - \card{V, X\setminus\set{s}}_f\\
+&= \size{f}.
+\end{align*}
+\end{proof}
+
+\begin{lemma}\label{FlowAtMostCapacity}
+If $f \le g$ where $f$ is a flow on $V$ and $g$ is a network on $V$, then $\size{f} \le \card{g}$.
+\end{lemma}
+\begin{proof}
+Pick $X \subseteq V\setminus\set{t}$ with $s \in X$ such that $\card{X, V\setminus X}_g = \card{g}$.  Then, by Lemma \ref{FlowValues}, 
+\begin{align*}
+\size{f} &= \card{X, V}_f - \card{V, X}_f \\
+&= \card{X, V\setminus X}_f + \card{X,X}_f - \card{V\setminus X, X}_f - \card{X,X}_f \\
+&= \card{X, V\setminus X}_f - \card{V\setminus X, X}_f\\
+&\le \card{X, V\setminus X}_g \\
+&= \card{g}.
+\end{align*}
+\end{proof}
+
+\begin{theorem}
+If $g$ is a network on $V$, then there exists a flow $f$ on $V$ with $f \le g$ such that $\size{f} = \card{g}$.
+Moreover, if $g$ takes only integer values, then the flow $f$ can be chosen to as well.
+\end{theorem}
+\begin{proof}
+Let $g$ be a network on $V$ and choose a flow $f \le g$ maximizing $\size{f}$.  By Lemma \ref{FlowAtMostCapacity}, $\size{f} \le \card{g}$.
+Let $X \subseteq V$ be the set of all $v \in V$ for which there is a sequence of distinct vertices $s = x_0, x_1, x_2, \ldots, x_n = v$ such that for each $0 \le i < n$, either
+$f(x_i, x_{i+1}) < g(x_i, x_{i+1})$ or $f(x_{i+1}, x_i) > 0$.  Plainly $s \in X$.
+
+Suppose $t \in X$ and let $s = x_0, x_1, x_2, \ldots, x_n = t$ be a sequence witnessing this fact.  
+Choose $\epsilon > 0$ such that for each $0 \le i < n$, either $f(x_i, x_{i+1}) \le g(x_i, x_{i+1}) - \epsilon$ or $f(x_{i+1}, x_i) \ge \epsilon$.  Modify $f$ to get $f'$
+by setting $f'(x_i, x_{i+1}) = f(x_i, x_{i+1}) + \epsilon$ if $f(x_i, x_{i+1}) \le g(x_i, x_{i+1}) - \epsilon$ and $f'(x_{i+1}, x_i) = f(x_{i+1}, x_i) -\epsilon$ otherwise.
+Then $f'$ is a flow with $f' \le g$ and $\size{f'} > \size{f}$, violating maximality of $\size{f}$.
+
+So, $t \not \in X$.  Since $v \in V \setminus X$ is not in $X$, we must have $f(x, v) = g(x,v)$ and $f(v,x) = 0$ for all $x \in X$.  Hence
+\begin{align*}
+\size{f} &= \card{X, V}_f - \card{V, X}_f \\
+&= \card{X, X}_f + \card{X, V\setminus X}_f - \card{X, X}_f - \card{V\setminus X, X}_f\\
+&= \card{X, V\setminus X}_f - \card{V\setminus X, X}_f\\
+&= \card{X, V\setminus X}_g\\
+&\ge \card{g}.
+\end{align*}
+\end{proof}
+
+\subsection*{degree again}
+\subsection*{maximum independent covers}
+\section*{polynomial tools}
+\subsection*{combinatorial nullstellensatz}
+\subsection*{coefficient formulae}
+\subsection*{a combinatorial interpretation}
+
 \chapter*{coloring edges}
 It is also useful to consider coloring the edges of a graph so that incident edges receive different colors.  This
 appears to be at odds with our previous claim that this book was only about coloring vertices of graph; fortunately, edge coloring
@@ -247,33 +424,6 @@ Let $\zeta$ be the edge coloring made from $\pi$ by swapping $\tau$ and $\gamma$
 
 \end{proof}
 
-
-
-%Before proving this result, we develop a tool that will useful throughout the book.
-
-%Suppose $G$ is a bipartite graph, say it has a $2$-coloring with colors red and blue.  Let $R \subseteq V(G)$ be the vertices colored red and
-%$B \subseteq V(G)$ the vertices colored red.  Then $R$ and $B$ are independent sets in $G$.  This situation is so common, we need special notation
-%to introduce bipartite graphs with the sets $R$ and $B$ already labeled, like so: let $G = (R,B)$ be a bipartite graph.\aaside{$G = (R,B)$}{}
-%A graph $G$ is $k$-regular if every vertex in $G$ has degree $k$. \aaside{$k$-regular}{} A $1$-regular graph is a \emph{matching}. \aaside{matching}{0.15in} If $H \subseteq G$ is a matching, then
-%$v \in V(G)$ is \emph{matched} in $H$ if $v$ is the endpoint of some edge in $H$.\aaside{matched}{0.1in}
-%
-%\begin{theorem}
-%Let $G = (R,B)$ be a bipartite graph.  If $\card{N_G(X)} \ge \card{X}$ for every $X \subseteq R$, then $G$ contains a matching $H$ that matches
-%every vertex of $R$.
-%\end{theorem}
-%\begin{proof}
-%Suppose the theorem does not hold.  Then we may pick a counterexample $G = (R,B)$ with $\size{G}$ as small as possible.  Surely, $\size{G} > 0$.
-%For any $uv \in E(G)$ with $u \in R$,, since a matching in $G-uv$ is also a matching in $G$, any matching in $G-uv$ must fail to match some vertex in $R$.
-%As $\size{G-uv} < \size{G}$, we may apply the theorem to $G-uv$ to conclude that there is $X_{uv} \subseteq R$ such that $\card{N_{G-uv}(X_{uv})} < \card{X_{uv}}$.
-%Since $\card{N_{G}(X_{uv})} \ge \card{X_{uv}}$, this means $v \not \in N_{G}(X_{uv}\setminus\set{u})$.
-%For every $v \in R$, the condition gives $\card{N_G(\set{v})} \ge \card{\set{v}} = 1$, so $d_G(v) \ge 1$.  If $d_G(v) = 1$ for every $v \in R$, then
-%$\card{N_G(R)} \ge \card{R}$ implies that $G$ contains a matching $H$ that matches
-%every vertex of $R$, a contradiction.  Hence we may pick $w \in R$ with $d_G(w) \ge 2$.  Let $wy, wz \in E(G)$.
-%Then $y \not \in N_{G}(X_{wy}\setminus\set{w})$ and $z \not \in N_{G}(X_{wz}\setminus\set{w})$
-%\end{proof}
-
-
-
 \section*{hardness}
 We now know that every graph $G$ can be edge colored with either $\Delta(G)$ or $\Delta(G) + 1$ colors.  So, edge coloring is basically trivial, right?
 Furtunately, no it isn't, the collection of graphs requiring $\Delta(G) + 1$ colors is very rich.  Another way to say this, is that it is a hard problem
@@ -287,16 +437,6 @@ We need a concise proof of this without having to introduce too much background.
 \end{proof}
 
 \chapter*{vertex coloring, again}
-\section*{list coloring}
-\section*{online list coloring}
-\section*{kernel tools}
-\subsection*{degree again}
-\subsection*{maximum independent covers}
-\section*{polynomial tools}
-\subsection*{combinatorial nullstellensatz}
-\subsection*{coefficient formulae}
-\subsection*{a combinatorial interpretation}
-
 \chapter*{edge coloring, again}
 \section*{fans as a greedy strategy}
 \section*{acceptable paths}
