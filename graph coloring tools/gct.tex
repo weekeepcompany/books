@@ -27,6 +27,7 @@
 \newtheorem{proposition}{Proposition}
 \newtheorem{remark}{Remark}
 \newtheorem{observation}{Observation}
+\newtheorem{question}{Question}
 \newtheorem{solution}{Solution}
 \newtheorem{summary}{Summary}
 \newtheorem{theorem}{Theorem}
@@ -257,12 +258,30 @@ This can be useful as it gives us a way to trade in some slack in the $\card{L(v
 If $L$ is a list assignment on a kernel-perfect superoriented graph $G$ such that $\card{L(v)} > d^+(v)$ for all $v \in V(G)$, then $G$ is $L$-colorable.
 \end{theorem}
 
+\begin{lemma}\label{KostochkaYanceyKernelLemma}
+If $G$ is a superoriented graph with an independent set $I$ such that all edges in $G-I$ have back arrows, then $G$ is kernel-perfect.
+\end{lemma}
+\begin{proof}
+Suppose there is a non-kernel-perfect superoriented graph $G$ with independent set $I$ such that all edges in $G-I$ have back arrows.  Then we may pick such a $G$ with $\card{G}$
+as small as possible.  Since $G$ is not kernel-perfect, there is $X \subseteq V(G)$ such that $G[X]$ has no kernel.  If $\card{X} < \card{G}$, 
+then we could apply the theorem to $G[X]$ to get a kernel, so we must have $X = V(G)$.  So $I$ is not a kernel in $G$ and hence there is $v \in V(G-I)$ 
+with none of its incident arrows pointing into $I$.  Remove $v$ and all its neighbors from $G$ to get a superoriented graph $H$. Since $\card{H} < \card{G}$, we may apply the
+theorem to $H$ to get a kernel $S$ in $H$.  But then $S \cup \set{v}$ is a kernel in $G$ since any vertex other than $v$ in $G-H$ is either in $I$ and hence 
+has an arrow to $v$ or is in $G-I$ and hence has a back arrow to $v$, a contradiction.
+\end{proof}
+
+\begin{question}
+Lemma \ref{KostochkaYanceyKernelLemma} says that if we take a graph $G$ with an independent set $I$ and direct all the edges of $G-I$ both ways and the edges 
+between $I$ and $V(G-I)$ arbitrarily, we get a kernel-perfect superoriented graph.  Can we classify the pairs $(G, F)$ where $G$ is a graph and $F \subseteq E(G)$ such that
+every superorientation of $G$ in which all edges in $F$ are bidirected are kernel-perfect?  \aaside{a few examples known}{}
+\end{question}
+
 An acylic oriented graph is plainly kernel-perfect, so Theorem \ref{KernelPerfectListBound} generalizes Theorem \ref{SecondListBound}.  
 But this is not the only possible generalization of acylic that works, later\aaside{when?}{} we will see another based on counting certain substructures of the oriented graph. 
 This second generalization of acyclic does not generalize kernel-pefection and kernel-perfection does not generalize it.
 
 \section*{flows}
-Using Theorem \ref{KernelPerfectSuperListBound}, we will prove an easily-applicable sufficient condition for a graph to be $L$-colorable.  
+Using Theorem \ref{KernelPerfectSuperListBound} and Lemma \ref{KostochkaYanceyKernelLemma}, we will prove an easily-applicable sufficient condition for a graph to be $L$-colorable.  
 But first, we need a general lemma that gives graph orientations with specified constraints on their out-degrees.  This lemma can be proved directly, 
 but a detour into the theory of flows will give us the lemma and many other results for free.
 

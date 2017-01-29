@@ -4,35 +4,35 @@
 \contentsline {section}{\tocsection {}{}{basic estimates}}{3}
 \contentsline {section}{\tocsection {}{}{list coloring}}{5}
 \contentsline {section}{\tocsection {}{}{flows}}{7}
-\contentsline {subsection}{\tocsubsection {}{}{degree again}}{8}
-\contentsline {subsection}{\tocsubsection {}{}{maximum independent covers}}{8}
-\contentsline {section}{\tocsection {}{}{polynomial tools}}{8}
-\contentsline {subsection}{\tocsubsection {}{}{combinatorial nullstellensatz}}{8}
-\contentsline {subsection}{\tocsubsection {}{}{coefficient formulae}}{8}
-\contentsline {subsection}{\tocsubsection {}{}{a combinatorial interpretation}}{8}
-\contentsline {chapter}{\tocchapter {Chapter}{}{coloring edges}}{9}
-\contentsline {section}{\tocsection {}{}{hardness}}{10}
-\contentsline {chapter}{\tocchapter {Chapter}{}{vertex coloring, again}}{13}
-\contentsline {chapter}{\tocchapter {Chapter}{}{edge coloring, again}}{15}
-\contentsline {section}{\tocsection {}{}{fans as a greedy strategy}}{15}
-\contentsline {section}{\tocsection {}{}{acceptable paths}}{15}
-\contentsline {section}{\tocsection {}{}{acceptable trees}}{15}
-\contentsline {section}{\tocsection {}{}{edge list coloring}}{15}
-\contentsline {subsection}{\tocsubsection {}{}{more kernel method}}{15}
-\contentsline {subsection}{\tocsubsection {}{}{2-edge-coloring}}{15}
-\contentsline {subsection}{\tocsubsection {}{}{improved degree theorem}}{15}
-\contentsline {subsection}{\tocsubsection {}{}{a hint of quasiline and claw-free graphs}}{15}
-\contentsline {chapter}{\tocchapter {Chapter}{}{shuffle tool}}{17}
-\contentsline {section}{\tocsection {}{}{destroying non-complete}}{17}
-\contentsline {section}{\tocsection {}{}{shuffling with more rules}}{17}
-\contentsline {section}{\tocsection {}{}{looking at the entire recoloring digraph}}{17}
-\contentsline {chapter}{\tocchapter {Chapter}{}{independent transversalls}}{19}
-\contentsline {section}{\tocsection {}{}{randomly}}{19}
-\contentsline {section}{\tocsection {}{}{Haxell's tool}}{19}
-\contentsline {subsection}{\tocsubsection {}{}{triangles within triangles are neat}}{19}
-\contentsline {section}{\tocsection {}{}{big maximum cliques intersect in simple ways}}{19}
-\contentsline {section}{\tocsection {}{}{going lopsided}}{19}
-\contentsline {chapter}{\tocchapter {Chapter}{}{vertex transitive graphs}}{21}
-\contentsline {section}{\tocsection {}{}{strong coloring}}{21}
-\contentsline {section}{\tocsection {}{}{medium clique implies big clique}}{21}
-\contentsline {chapter}{\tocchapter {Chapter}{}{potential potential tool}}{23}
+\contentsline {subsection}{\tocsubsection {}{}{degree again}}{9}
+\contentsline {subsection}{\tocsubsection {}{}{maximum independent covers}}{9}
+\contentsline {section}{\tocsection {}{}{polynomial tools}}{9}
+\contentsline {subsection}{\tocsubsection {}{}{combinatorial nullstellensatz}}{9}
+\contentsline {subsection}{\tocsubsection {}{}{coefficient formulae}}{9}
+\contentsline {subsection}{\tocsubsection {}{}{a combinatorial interpretation}}{9}
+\contentsline {chapter}{\tocchapter {Chapter}{}{coloring edges}}{11}
+\contentsline {section}{\tocsection {}{}{hardness}}{12}
+\contentsline {chapter}{\tocchapter {Chapter}{}{vertex coloring, again}}{15}
+\contentsline {chapter}{\tocchapter {Chapter}{}{edge coloring, again}}{17}
+\contentsline {section}{\tocsection {}{}{fans as a greedy strategy}}{17}
+\contentsline {section}{\tocsection {}{}{acceptable paths}}{17}
+\contentsline {section}{\tocsection {}{}{acceptable trees}}{17}
+\contentsline {section}{\tocsection {}{}{edge list coloring}}{17}
+\contentsline {subsection}{\tocsubsection {}{}{more kernel method}}{17}
+\contentsline {subsection}{\tocsubsection {}{}{2-edge-coloring}}{17}
+\contentsline {subsection}{\tocsubsection {}{}{improved degree theorem}}{17}
+\contentsline {subsection}{\tocsubsection {}{}{a hint of quasiline and claw-free graphs}}{17}
+\contentsline {chapter}{\tocchapter {Chapter}{}{shuffle tool}}{19}
+\contentsline {section}{\tocsection {}{}{destroying non-complete}}{19}
+\contentsline {section}{\tocsection {}{}{shuffling with more rules}}{19}
+\contentsline {section}{\tocsection {}{}{looking at the entire recoloring digraph}}{19}
+\contentsline {chapter}{\tocchapter {Chapter}{}{independent transversalls}}{21}
+\contentsline {section}{\tocsection {}{}{randomly}}{21}
+\contentsline {section}{\tocsection {}{}{Haxell's tool}}{21}
+\contentsline {subsection}{\tocsubsection {}{}{triangles within triangles are neat}}{21}
+\contentsline {section}{\tocsection {}{}{big maximum cliques intersect in simple ways}}{21}
+\contentsline {section}{\tocsection {}{}{going lopsided}}{21}
+\contentsline {chapter}{\tocchapter {Chapter}{}{vertex transitive graphs}}{23}
+\contentsline {section}{\tocsection {}{}{strong coloring}}{23}
+\contentsline {section}{\tocsection {}{}{medium clique implies big clique}}{23}
+\contentsline {chapter}{\tocchapter {Chapter}{}{potential potential tool}}{25}
